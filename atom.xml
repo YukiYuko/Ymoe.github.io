@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukiyuko.github.io/Ymoe.github.io/</id>
     <title>Yuki-雪落下的声音</title>
-    <updated>2020-03-23T16:00:57.913Z</updated>
+    <updated>2020-03-23T16:05:17.335Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukiyuko.github.io/Ymoe.github.io/"/>
     <link rel="self" href="https://yukiyuko.github.io/Ymoe.github.io/atom.xml"/>
@@ -33,6 +33,15 @@ d: &quot;e&quot;<br>
 console.log(getHelloLength(obj1)); // 5</p>
 <p>console.log(getHello(obj2)); // undefined<br>
 console.log(getHelloLength(obj2)); // undefined</p>
+<p>或者使用  需要添加 @babel/plugin-proposal-optional-chaining 插件支持， 可参考babel 7 简单升级指南（https://juejin.im/post/5b87cab1e51d4538ac05dc54）， 最喜欢这个语法，babel7 升级第一时间试用</p>
+<p>// obj?.prop       // optional static property access<br>
+// obj?.[expr]     // optional dynamic property access<br>
+// func?.(...args) // optional function or method call</p>
+<p>// 如下代码<br>
+let { data } = this.props<br>
+let list = data &amp;&amp; data.tableData &amp;&amp; data.tableData.list || []</p>
+<p>// 使用 ?.<br>
+let list = data?.tableData?.list || []</p>
 ]]></content>
     </entry>
     <entry>
