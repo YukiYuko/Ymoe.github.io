@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Yuki-雪落下的声音</title>
+<title>JS深层对象如何判断存在 | Yuki-雪落下的声音</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,9 @@
 
 
 
-    <meta name="description" content="你知道雪的颜色为什么是白色吗？因为它早已经忘了自己本身的颜色。">
+    <meta name="description" content="var mb = p =&gt; o =&gt; p.map(c =&gt; (o = (o || {})[c])) &amp;&amp; o;
+var getHello = mb([&quot;a&quot;, &quot;b&quot;..." />
+    <meta name="keywords" content="JS" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,14 +90,54 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">JS深层对象如何判断存在</h2>
+            <div class="post-date">2020-03-23</div>
             
-              <a class="tag" href="https://yukiyuko.github.io/Ymoe.github.io/tag/SDPwXe8Qs/">JS</a>
+            <div class="post-content" v-pre>
+              <p>var mb = p =&gt; o =&gt; p.map(c =&gt; (o = (o || {})[c])) &amp;&amp; o;<br>
+var getHello = mb([&quot;a&quot;, &quot;b&quot;, 0, &quot;hello&quot;]);<br>
+var getHelloLength = mb([&quot;a&quot;, &quot;b&quot;, 0, &quot;hello&quot;, &quot;length&quot;]);</p>
+<p>var obj1 = {<br>
+a: {<br>
+b: [{ hello: &quot;world&quot; }]<br>
+}<br>
+};</p>
+<p>var obj2 = {<br>
+c: {<br>
+d: &quot;e&quot;<br>
+}<br>
+};</p>
+<p>console.log(getHello(obj1)); // world;<br>
+console.log(getHelloLength(obj1)); // 5</p>
+<p>console.log(getHello(obj2)); // undefined<br>
+console.log(getHelloLength(obj2)); // undefined</p>
+
+            </div>
             
-              <a class="tag" href="https://yukiyuko.github.io/Ymoe.github.io/tag/HlQwsXaJz/">Gridea</a>
+              <div class="tag-container">
+                
+                  <a href="https://yukiyuko.github.io/Ymoe.github.io/tag/SDPwXe8Qs/" class="tag">
+                    JS
+                  </a>
+                
+              </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yukiyuko.github.io/Ymoe.github.io/post/hello-world/">
+                  <h3 class="post-title">
+                    Hello, world！
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
+
         </div>
       </div>
     </div>

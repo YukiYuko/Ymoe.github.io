@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukiyuko.github.io/Ymoe.github.io/</id>
     <title>Yuki-雪落下的声音</title>
-    <updated>2020-03-21T10:56:31.400Z</updated>
+    <updated>2020-03-23T16:00:57.913Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukiyuko.github.io/Ymoe.github.io/"/>
     <link rel="self" href="https://yukiyuko.github.io/Ymoe.github.io/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>https://yukiyuko.github.io/Ymoe.github.io/images/avatar.png</logo>
     <icon>https://yukiyuko.github.io/Ymoe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Yuki-雪落下的声音</rights>
+    <entry>
+        <title type="html"><![CDATA[JS深层对象如何判断存在]]></title>
+        <id>https://yukiyuko.github.io/Ymoe.github.io/post/js-shen-ceng-dui-xiang-ru-he-pan-duan-cun-zai/</id>
+        <link href="https://yukiyuko.github.io/Ymoe.github.io/post/js-shen-ceng-dui-xiang-ru-he-pan-duan-cun-zai/">
+        </link>
+        <updated>2020-03-23T15:59:04.000Z</updated>
+        <content type="html"><![CDATA[<p>var mb = p =&gt; o =&gt; p.map(c =&gt; (o = (o || {})[c])) &amp;&amp; o;<br>
+var getHello = mb([&quot;a&quot;, &quot;b&quot;, 0, &quot;hello&quot;]);<br>
+var getHelloLength = mb([&quot;a&quot;, &quot;b&quot;, 0, &quot;hello&quot;, &quot;length&quot;]);</p>
+<p>var obj1 = {<br>
+a: {<br>
+b: [{ hello: &quot;world&quot; }]<br>
+}<br>
+};</p>
+<p>var obj2 = {<br>
+c: {<br>
+d: &quot;e&quot;<br>
+}<br>
+};</p>
+<p>console.log(getHello(obj1)); // world;<br>
+console.log(getHelloLength(obj1)); // 5</p>
+<p>console.log(getHello(obj2)); // undefined<br>
+console.log(getHelloLength(obj2)); // undefined</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello, world！]]></title>
         <id>https://yukiyuko.github.io/Ymoe.github.io/post/hello-world/</id>
