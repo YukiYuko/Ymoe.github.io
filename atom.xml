@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukiyuko.github.io/Ymoe.github.io/</id>
     <title>Yuki-雪落下的声音</title>
-    <updated>2020-03-23T16:05:17.335Z</updated>
+    <updated>2020-03-24T16:05:41.632Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukiyuko.github.io/Ymoe.github.io/"/>
     <link rel="self" href="https://yukiyuko.github.io/Ymoe.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://yukiyuko.github.io/Ymoe.github.io/images/avatar.png</logo>
     <icon>https://yukiyuko.github.io/Ymoe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Yuki-雪落下的声音</rights>
+    <entry>
+        <title type="html"><![CDATA[Base64 互转 Blob]]></title>
+        <id>https://yukiyuko.github.io/Ymoe.github.io/post/base64-hu-zhuan-blob/</id>
+        <link href="https://yukiyuko.github.io/Ymoe.github.io/post/base64-hu-zhuan-blob/">
+        </link>
+        <updated>2020-03-24T16:04:47.000Z</updated>
+        <content type="html"><![CDATA[<p>Base64 to Blob</p>
+<p>function dataURLtoBlob(dataurl) {<br>
+var arr = dataurl.split(','), mime = arr[0].match(/😦.*?);/)[1],<br>
+bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);<br>
+while (n--) {<br>
+u8arr[n] = bstr.charCodeAt(n);<br>
+}<br>
+return new Blob([u8arr], { type: mime });<br>
+}</p>
+<p>Blob to Base64</p>
+<p>function blobToDataURL(blob, callback) {<br>
+let a = new FileReader();<br>
+a.onload = function (e) { callback(e.target.result); }<br>
+a.readAsDataURL(blob);<br>
+}</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JS深层对象如何判断存在]]></title>
         <id>https://yukiyuko.github.io/Ymoe.github.io/post/js-shen-ceng-dui-xiang-ru-he-pan-duan-cun-zai/</id>
